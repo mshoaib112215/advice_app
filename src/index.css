@@ -1,13 +1,134 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+ #root, html, body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    box-sizing: border-box;
+}
+.app{
+    
+    background: linear-gradient(rgba(0,0,0,0.1) , rgba(49, 49, 49, 0.4)), url('./img/bg_img.jpg');
+    
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+
+}
+.card{
+    background-color: rgba(245, 245, 245, 0.705);
+    border-radius: 10px;
+    width: 40%;
+    height: 30%;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    text-align: center;
+    color: rgb(43, 43, 43);
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 0.8rem;
+}
+.app__advice {
+  display: flex;
+  align-items: center;
+  height: 582px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.app__advice-btn{
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    height: 250px;
+    width: 210px;
+    opacity: 1;
+    background-color: #ffffff;
+    border: 1px solid rgba(22, 76, 167, 0.6);
+}
+.app__advice-btn span {
+  color: #164ca7;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+.app__advice-btn:hover{
+    animation: rotate 0.7s ease-in-out both;
+    
+}
+.app__advice-btn:hover span{
+    animation: storm 0.7s ease-in-out both;
+    
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+  
+@keyframes storm {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}  
+@media only screen and (max-width: 600px) {
+  .card {
+      width: 80%;
+      height: 30%;
+      font-size: 0.6rem;
+  }
+  .app__advice-btn{
+      height: 150px;
+      width: 210px;
+      /* font-size: 50%; */
+
+  }
+}
+.title{
+    font-size: large;   
+    position: absolute;
+    top: 43px;
+    color:rgb(43, 43, 43);
+    font-size: 1.6rem;  
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    background-color: rgba(245, 245, 245, 0.705);
+    padding: 13px;
+    border-radius: 10px;
+
+
+
 }
